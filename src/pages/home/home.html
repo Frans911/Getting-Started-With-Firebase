@@ -1,0 +1,27 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar text-center color="bgdark">
+    <ion-title>FirebaseApp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="body" text-center>
+ <ion-list>
+  <ion-item  style="background: rgba(0,0,0,.5);width: 95%;margin: 0.5em;border-radius: 5px;border: none" >
+    <ion-label color="light" floating>Provide your name :</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+    <ion-item style="background: rgba(255,255,255,.5);width: 95%;margin: 0.5em;border-radius: 5px;border: none" *ngFor="let item of items">{{item}}</ion-item>
+ </ion-list>
+ <button ion-button color="bgdark" (click)="PushToDatabase()">
+    Push To Database
+  </button>   
+</ion-content>
